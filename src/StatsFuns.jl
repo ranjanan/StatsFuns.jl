@@ -264,10 +264,12 @@ export
 
 ## source files
 include("misc.jl")
-include("rmath.jl")
+@static if Base.USE_GPL_LIBS
+    include("rmath.jl")
+    using .RFunctions
+end
 include("tvpack.jl")
 
-using .RFunctions
 
 include("distrs/beta.jl")
 include("distrs/binom.jl")

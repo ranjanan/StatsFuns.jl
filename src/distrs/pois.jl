@@ -1,5 +1,6 @@
 # functions related to Poisson distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     # poispdf,
@@ -12,6 +13,7 @@ using .RFunctions:
     poisinvccdf,
     poisinvlogcdf,
     poisinvlogccdf
+end
 
 # Julia implementations
 poispdf(λ::Real, x::Real) = exp(poislogpdf(λ, x))

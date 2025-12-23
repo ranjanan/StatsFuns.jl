@@ -1,5 +1,6 @@
 # functions related to noncentral T distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     ntdistpdf,
@@ -12,3 +13,4 @@ using .RFunctions:
     ntdistinvccdf,
     ntdistinvlogcdf,
     ntdistinvlogccdf
+end

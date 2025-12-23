@@ -2,6 +2,7 @@
 
 using HypergeometricFunctions: _₁F₁
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     # gammapdf,
@@ -14,6 +15,7 @@ using .RFunctions:
     # gammainvccdf,
     gammainvlogcdf,
     gammainvlogccdf
+end
 
 # Julia implementations
 gammapdf(k::Real, θ::Real, x::Real) = exp(gammalogpdf(k, θ, x))

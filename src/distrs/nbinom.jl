@@ -1,5 +1,6 @@
 # functions related to negative binomial distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     nbinompdf,
@@ -12,3 +13,4 @@ using .RFunctions:
     nbinominvccdf,
     nbinominvlogcdf,
     nbinominvlogccdf
+end

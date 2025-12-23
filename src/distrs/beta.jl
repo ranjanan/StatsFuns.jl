@@ -2,6 +2,7 @@
 
 using HypergeometricFunctions: _₂F₁
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     # betapdf,
@@ -14,6 +15,7 @@ using .RFunctions:
     # betainvccdf,
     betainvlogcdf,
     betainvlogccdf
+end
 
 # Julia implementations
 betapdf(α::Real, β::Real, x::Real) = exp(betalogpdf(α, β, x))

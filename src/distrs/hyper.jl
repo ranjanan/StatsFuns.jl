@@ -1,5 +1,6 @@
 # functions related to hyper-geometric distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     hyperpdf,
@@ -12,3 +13,4 @@ using .RFunctions:
     hyperinvccdf,
     hyperinvlogcdf,
     hyperinvlogccdf
+end

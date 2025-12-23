@@ -1,5 +1,6 @@
 # functions related to noncentral F distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     nfdistpdf,
@@ -12,3 +13,4 @@ using .RFunctions:
     nfdistinvccdf,
     nfdistinvlogcdf,
     nfdistinvlogccdf
+end

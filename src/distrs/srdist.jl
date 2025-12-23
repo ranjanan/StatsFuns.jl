@@ -1,5 +1,6 @@
 # functions related to studentized range distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     srdistcdf,
@@ -10,3 +11,4 @@ using .RFunctions:
     srdistinvccdf,
     srdistinvlogcdf,
     srdistinvlogccdf
+end

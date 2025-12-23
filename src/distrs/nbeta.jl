@@ -1,5 +1,6 @@
 # functions related to noncentral beta distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     nbetapdf,
@@ -12,3 +13,4 @@ using .RFunctions:
     nbetainvccdf,
     nbetainvlogcdf,
     nbetainvlogccdf
+end

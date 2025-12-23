@@ -1,5 +1,6 @@
 # functions related to noncentral chi-square distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     nchisqpdf,
@@ -12,3 +13,4 @@ using .RFunctions:
     nchisqinvccdf,
     nchisqinvlogcdf,
     nchisqinvlogccdf
+end

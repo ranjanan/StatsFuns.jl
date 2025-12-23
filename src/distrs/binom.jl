@@ -1,5 +1,6 @@
 # functions related to binomial distribution
 
+@static if Base.USE_GPL_LIBS
 # R implementations
 using .RFunctions:
     # binompdf,
@@ -12,6 +13,7 @@ using .RFunctions:
     binominvccdf,
     binominvlogcdf,
     binominvlogccdf
+end
 
 # Julia implementations
 binompdf(n::Real, p::Real, k::Real) = exp(binomlogpdf(n, p, k))
